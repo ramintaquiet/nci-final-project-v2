@@ -29,6 +29,8 @@ gem 'jbuilder', '~> 2.7'
 gem 'bootstrap'
 gem 'jquery-rails'
 gem 'devise'
+gem 'simple_form'
+gem 'humanize_boolean'
 
 
 

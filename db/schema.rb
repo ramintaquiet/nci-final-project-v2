@@ -10,7 +10,39 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_11_25_203549) do
+ActiveRecord::Schema.define(version: 2020_11_26_111330) do
+
+  create_table "categories", force: :cascade do |t|
+    t.string "name"
+    t.boolean "display"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "genders", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "petprofiles", force: :cascade do |t|
+    t.string "name"
+    t.integer "category_id", null: false
+    t.integer "gender_id", null: false
+    t.string "breed"
+    t.date "DOB"
+    t.boolean "pedigree"
+    t.boolean "vaccinated"
+    t.boolean "microchipped"
+    t.boolean "available"
+    t.integer "user_id", null: false
+    t.text "about"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["category_id"], name: "index_petprofiles_on_category_id"
+    t.index ["gender_id"], name: "index_petprofiles_on_gender_id"
+    t.index ["user_id"], name: "index_petprofiles_on_user_id"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -29,4 +61,7 @@ ActiveRecord::Schema.define(version: 2020_11_25_203549) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "petprofiles", "categories"
+  add_foreign_key "petprofiles", "genders"
+  add_foreign_key "petprofiles", "users"
 end

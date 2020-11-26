@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
 
+  resources :genders
+  resources :categories
+  resources :petprofiles
   devise_for :users
   root 'pages#home'
 

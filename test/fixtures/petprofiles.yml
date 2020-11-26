@@ -1,0 +1,27 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  category: one
+  gender: one
+  breed: MyString
+  DOB: 2020-11-26
+  pedigree: false
+  vaccinated: false
+  microchipped: false
+  available: false
+  user: one
+  about: MyText
+
+two:
+  name: MyString
+  category: two
+  gender: two
+  breed: MyString
+  DOB: 2020-11-26
+  pedigree: false
+  vaccinated: false
+  microchipped: false
+  available: false
+  user: two
+  about: MyText

@@ -1,0 +1,59 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @petprofile.name %>
+</p>
+
+<p>
+  <strong>Category:</strong>
+  <%= @petprofile.category.name %>
+</p>
+
+<p>
+  <strong>Gender:</strong>
+  <%= @petprofile.gender.name %>
+</p>
+
+<p>
+  <strong>Breed:</strong>
+  <%= @petprofile.breed %>
+</p>
+
+<p>
+  <strong>Dob:</strong>
+  <%= @petprofile.DOB %>
+</p>
+
+<p>
+  <strong>Pedigree:</strong>
+  <%= @petprofile.pedigree %>
+</p>
+
+<p>
+  <strong>Vaccinated:</strong>
+  <%= @petprofile.vaccinated %>
+</p>
+
+<p>
+  <strong>Microchipped:</strong>
+  <%= @petprofile.microchipped %>
+</p>
+
+<p>
+  <strong>Available:</strong>
+  <%= @petprofile.available %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @petprofile.user.name %>
+</p>
+
+<p>
+  <strong>About:</strong>
+  <%= @petprofile.about %>
+</p>
+
+<%= link_to 'Edit', edit_petprofile_path(@petprofile) %> |
+<%= link_to 'Back', petprofiles_path %>

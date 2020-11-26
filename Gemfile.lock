@@ -92,6 +92,8 @@ GEM
     ffi (1.13.1-x64-mingw32)
     globalid (0.4.2)
       activesupport (>= 4.2.0)
+    humanize_boolean (0.0.2)
+      i18n
     i18n (1.8.5)
       concurrent-ruby (~> 1.0)
     jbuilder (2.10.1)
@@ -171,6 +173,9 @@ GEM
     selenium-webdriver (3.142.7)
       childprocess (>= 0.5, < 4.0)
       rubyzip (>= 1.2.2)
+    simple_form (5.0.3)
+      actionpack (>= 5.0)
+      activemodel (>= 5.0)
     sprockets (4.0.2)
       concurrent-ruby (~> 1.0)
       rack (> 1, < 3)
@@ -220,12 +225,14 @@ DEPENDENCIES
   byebug
   capybara (>= 2.15)
   devise
+  humanize_boolean
   jbuilder (~> 2.7)
   jquery-rails
   puma (~> 4.1)
   rails (~> 6.0.3, >= 6.0.3.4)
   sass-rails (>= 6)
   selenium-webdriver
+  simple_form
   sqlite3 (~> 1.4)
   turbolinks (~> 5)
   tzinfo-data

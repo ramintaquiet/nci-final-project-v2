@@ -1,0 +1,73 @@
+<%= form_with(model: petprofile, local: true) do |form| %>
+  <% if petprofile.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(petprofile.errors.count, "error") %> prohibited this petprofile from being saved:</h2>
+      <%= human_boolean(pedigree) %>
+      <ul>
+        <% petprofile.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :category_id %>
+   
+    <%= form.select :category_id, options_from_collection_for_select(Category.all, 
+      :id, :name, @petprofile.category) %>
+  </div>
+
+  <div class="field">
+    <%= form.label :gender_id %>
+   
+    <%= form.select :gender_id, options_from_collection_for_select(Gender.all, 
+      :id, :name, @petprofile.gender) %>
+  </div>
+
+  <div class="field">
+    <%= form.label :breed %>
+    <%= form.text_field :breed %>
+  </div>
+
+  <div class="field">
+    <%= form.label :DOB %>
+    <%= form.date_select :DOB %>
+  </div>
+
+  <div class="field">
+    <%= form.label :pedigree %>
+    <%= form.check_box :pedigree %>
+  </div>
+
+  <div class="field">
+    <%= form.label :vaccinated %>
+    <%= form.check_box :vaccinated %>
+  </div>
+
+  <div class="field">
+    <%= form.label :microchipped %>
+    <%= form.check_box :microchipped %>
+  </div>
+
+  <div class="field">
+    <%= form.label :available %>
+    <%= form.check_box :available %>
+  </div>
+
+
+
+  <div class="field">
+    <%= form.label :about %>
+    <%= form.text_area :about %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

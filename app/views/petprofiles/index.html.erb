@@ -1,0 +1,52 @@
+<p id="notice"><%= notice %></p>
+
+
+
+
+<h1>Petprofiles</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Category</th>
+      <th>Gender</th>
+      <th>Breed</th>
+      <th>Dob</th>
+      <th>Pedigree</th>
+      <th>Vaccinated</th>
+      <th>Microchipped</th>
+      <th>Available</th>
+      <th>User</th>
+      <th>About</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+
+  <tbody>
+    <% @petprofiles.each do |petprofile| %>
+      <tr>
+        <td><%= petprofile.name %></td>
+        <td><%= petprofile.category.name %></td>
+        <td><%= petprofile.gender.name %></td>
+        <td><%= petprofile.breed %></td>
+        <td><%= petprofile.DOB %></td>
+        <td><%= petprofile.pedigree? ? 'yes' : 'no' %></td>
+        <td><%= petprofile.vaccinated? ? 'yes' : 'no' %></td>
+        <td><%= petprofile.microchipped? ? 'yes' : 'no'%></td>
+
+        <td><%= petprofile.available?  ? 'yes' : 'no' %></td>
+        <td><%= petprofile.user.name %></td>
+        <td><%= petprofile.about %></td>
+        <td><%= link_to 'Show', petprofile %></td>
+        <td><%= link_to 'Edit', edit_petprofile_path(petprofile) %></td>
+        <td><%= link_to 'Destroy', petprofile, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Petprofile', new_petprofile_path %>
