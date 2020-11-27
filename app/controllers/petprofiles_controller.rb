@@ -1,6 +1,6 @@
 class PetprofilesController < ApplicationController
   before_action :set_petprofile, only: [:show, :edit, :update, :destroy]
-  before_action :authenticate_user!
+  before_action :authenticate_user!, only: [:new, :edit,:destroy]
   # GET /petprofiles
   # GET /petprofiles.json
   def index
@@ -74,6 +74,7 @@ class PetprofilesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def petprofile_params
-      params.require(:petprofile).permit(:name, :category_id, :gender_id, :breed, :DOB, :pedigree, :vaccinated, :microchipped, :available, :about)
+      params.require(:petprofile).permit(:name, :category_id, :gender_id, :breed,
+         :DOB, :pedigree, :vaccinated, :microchipped, :available, :about, :image)
     end
 end
