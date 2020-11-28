@@ -1,18 +1,18 @@
 <p id="notice"><%= notice %></p>
 
+<div class="profile">
 
 <p>
 <% if @petprofile.image.attached? %>
 <div style="width:300px; height:auto">
   <%= link_to image_tag(@petprofile.image, style:"width:100%"), petprofiles_path %>
   <% else %>
+  
 <div style="width:300px; height:auto">
-<%= image_tag("/defimage.jpg", style:"width:100%") %>
+<%= link_to image_tag("/defimage.jpg", style:"width:100%"), petprofiles_path %>
 <% end %>
   </div>
-</p>
 
-<p>
   <strong>Name:</strong>
   <%= @petprofile.name %>
 </p>
@@ -67,5 +67,8 @@
   <%= @petprofile.about %>
 </p>
 
-<%= link_to 'Edit', edit_petprofile_path(@petprofile) %> |
+<%= link_to 'Edit', edit_petprofile_path(@petprofile) %> 
+<%= link_to 'Destroy', @petprofile, method: :delete, data: { confirm: 'Are you sure?' } %>
 <%= link_to 'Back', petprofiles_path %>
+
+</div>
