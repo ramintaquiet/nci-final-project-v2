@@ -1,23 +1,22 @@
  @import "bootstrap";
 
-.navbar {
-    background-color: #524789 !important;
+
+
+
+
+.container {
+   
    
 }
 
-.container {
-    background-color: bisque;
-    opacity: 50%;
-
+.navbar a:hover {
+    color: grey !important;
 }
-
-
 
 .profile {
  position: relative;
     min-height: 100vh;
     border: 5px solid red;
-  
     margin: auto;
     width: 80%;
     padding-left: 5% ;    

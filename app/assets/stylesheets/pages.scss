@@ -1,39 +1,37 @@
 
  @import "bootstrap";
 
- 
+ .navbar {
+   position: fixed;
+  
+  
+ }
  
  body {
+   
     width: 100vw;
     height: 100vh;
-    background-image: url("/love2blur.jpg");
+    background-image: url("/blur/copycat2blur.jpg");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: 100% 100%;
+    position: relative;
+    
 
+}
+
+.separator {
+  padding-top: 100px;
 
 
 }
 
-#bg {
-    position: fixed; 
-    top: -50%; 
-    left: -50%; 
-    width: 200%; 
-    height: 200%;
-  }
-  #bg img {
-    position: absolute; 
-    top: 0; 
-    left: 0; 
-    right: 0; 
-    bottom: 0; 
-    margin: auto; 
-    min-width: 50%;
-    min-height: 50%;
-  }
-
-.page-container {
-    padding: 100px;
+#abouttext { 
+  padding-top: 30px;
+  border-radius: 20px;
+  opacity: 90%;
 }
 
+.featurette {
+
+}
