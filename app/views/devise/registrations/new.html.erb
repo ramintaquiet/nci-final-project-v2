@@ -15,7 +15,7 @@
   <div class="field">
     <%= f.label :password %>
     <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
+    <em>(min <%= @minimum_password_length %> characters)</em>
     <% end %><br />
     <%= f.password_field :password, autocomplete: "new-password" %>
   </div>
@@ -48,10 +48,11 @@
 <%= f.text_field :county %>
 </div>
 
-<div class="field">
+<div class="text_area" rows="16">
 <%= f.label :info %><br />
-<%= f.text_field :info %>
+<%= f.text_area :info %>
 </div>
+</br>
 
 
 
@@ -61,8 +62,10 @@
   </div>
 <% end %>
 
-<%= render "devise/shared/links" %>
+
 
 
 </div>
 </div>
+
+<br>

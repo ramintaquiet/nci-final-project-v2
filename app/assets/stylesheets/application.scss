@@ -4,7 +4,7 @@
 
 
 .container1 {
-    border: 5px solid green;
+   
     text-align: center;
     margin: auto;
     padding-top: 30px;
@@ -58,11 +58,21 @@ h1 {
     text-align: center;
 }
 
+h2 {
+    color: #466060;
+    text-align: center;
+}
+
+
+h3 {
+  color:   #383d41;
+}
+
 
 
     .separator {
         padding-top: 100px;
-        border: 5px solid yellow;
+     
       
       }
     
@@ -74,8 +84,46 @@ h1 {
        
       }
     
-    
-   
+      .btn-outline-danger {
+          background-color: #DB6B6B !important;
+          text-decoration: none !important;
+          color: beige !important;
+          border-color:  #DB6B6B !important;
+      }
 
-     
-      
+    
+   .lead {
+       text-align: justify;
+   }
+
+   .lead1 {
+    text-align: justify;
+    font-size: medium;
+}
+
+   
+      .card {
+          background-color: transparent !important;
+      }
+
+      .btn-link {
+          color: #50555b !important;
+      }
+
+      .list-group {
+        background-color: transparent !important;
+        text-align: justify;
+
+
+      }
+
+      .list-group-item-secondary {
+       
+          
+          font-weight: bold;
+          text-align: justify;
+        
+          
+      }
+
+  
