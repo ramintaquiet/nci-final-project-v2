@@ -1,17 +1,15 @@
-<p id="notice"><%= notice %></p>
-
-
-<%= link_to 'New Petprofile', new_petprofile_path %>
 
 
 
+<div class="container"> 
 
-        
+</div>
+  
 <div class="separator">  
 
+<h2> Pet profiles </h2>
 
-<h1> Pet profiles </h1>
-
+<br>
 
 <div class="container"> 
         
@@ -21,9 +19,9 @@
     <% @petprofiles.each do |petprofile| %>
     
       <%= link_to petprofile.image.attached? ? image_tag(petprofile.image, 
-        style:"width:320px; height:380px; border:2px solid gray; margin-top:8px " )
-       : image_tag("/defimage.jpg",
-         style:"width:320px; height:380px; border:2px solid gray; margin-top:8px" ), petprofile %></td>
+        style:"width:320px; height:380px; border:4px solid #383d41; margin-top:8px " )
+       : image_tag("/defimage3.png",
+         style:"width:320px; height:380px; border:4px solid #383d41; margin-top:8px" ), petprofile %></td>
  
     <% end %>
 
@@ -31,6 +29,8 @@
 
 
  </div> 
+
+ <br>
 
 
 

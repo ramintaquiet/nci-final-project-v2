@@ -1,16 +1,12 @@
  @import "bootstrap";
 
 
-
-
 .container1 {
    
     text-align: center;
     margin: auto;
     padding-top: 30px;
-  
-
-    
+   
 }
 
 
@@ -29,6 +25,16 @@
 
     
 }
+
+
+.container3 {
+width: 65%;
+text-align: left;
+float: right;
+
+   
+}
+
 
 body {
    
@@ -69,22 +75,23 @@ h3 {
 }
 
 
+h4 {
+    color:   #50555b;
+  }
+  
 
-    .separator {
+.separator {
         padding-top: 100px;
-     
-      
+        padding-bottom: 60px;
+        
       }
     
       
-    
-      .navbar {
-        position: fixed;
-       
-       
+.navbar {
+        position: fixed;      
       }
     
-      .btn-outline-danger {
+.btn-outline-danger {
           background-color: #DB6B6B !important;
           text-decoration: none !important;
           color: beige !important;
@@ -92,38 +99,58 @@ h3 {
       }
 
     
-   .lead {
+.lead {
        text-align: justify;
    }
 
-   .lead1 {
+
+.lead1 {
     text-align: justify;
     font-size: medium;
 }
 
+
+.lead2 {
+    text-align: justify;
    
-      .card {
+}
+
+
+   
+.card {
           background-color: transparent !important;
       }
 
-      .btn-link {
+.btn-link {
           color: #50555b !important;
       }
 
-      .list-group {
+.list-group {
         background-color: transparent !important;
         text-align: justify;
-
-
       }
 
-      .list-group-item-secondary {
+
+.list-group-item-secondary {
        
           
           font-weight: bold;
-          text-align: justify;
-        
-          
+          text-align: justify;         
       }
 
   
+
+      .field {
+        margin-bottom: 8px;
+          font-weight: bold;
+         
+      }
+
+      .text_area {
+          font-weight: bold;
+      }
+.owner {
+    border: 5px solid red;
+    text-align: left;
+    
+}

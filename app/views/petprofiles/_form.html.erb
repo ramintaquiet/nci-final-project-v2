@@ -18,6 +18,7 @@
 
   <div class="field">
     <%= form.label :name %>
+    
     <%= form.text_field :name %>
   </div>
 
@@ -67,12 +68,18 @@
 
 
 
-  <div class="field">
+  
+  <div class="text_area" rows="16">
     <%= form.label :about %>
+    <p>
     <%= form.text_area :about %>
   </div>
 
+
+
+
+
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit "Submit", :class => "btn btn-secondary" %>
   </div>
 <% end %>
