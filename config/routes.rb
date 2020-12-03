@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  get 'favoritepet/update'
   resources :genders
   resources :categories
   resources :petprofiles

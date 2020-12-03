@@ -1,6 +1,6 @@
 class PetprofilesController < ApplicationController
   before_action :set_petprofile, only: [:show, :edit, :update, :destroy]
-  before_action :authenticate_user!, only: [:new, :edit,:destroy]
+  before_action :authenticate_user!, only: [:new, :edit, :destroy]
   # GET /petprofiles
   # GET /petprofiles.json
   def index
@@ -10,6 +10,8 @@ class PetprofilesController < ApplicationController
   # GET /petprofiles/1
   # GET /petprofiles/1.json
   def show
+
+    @favoritepet_exists = Favoritepet.where(petprofile: @petprofile, user: current_user) == [] ? false : true
   end
 
   # GET /petprofiles/new

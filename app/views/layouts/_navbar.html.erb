@@ -31,15 +31,12 @@
       </li>
 
       <li class="nav-item">
-      <a class="nav-link" <%= link_to 'Pet Profiles', petprofiles_path,  style:"color:#f9e8dc;   font-weight:bold"  %>  </a>
+      <a class="nav-link" <%= link_to 'Pets Profiles', petprofiles_path,  style:"color:#f9e8dc;   font-weight:bold"  %>  </a>
 
       </li>
 
 
-      <li class="nav-item">
-      <a class="nav-link" <%= link_to 'New Pet', new_petprofile_path,  style:"color:#f9e8dc;   font-weight:bold"  %>  </a>
-
-      </li>
+  
 
 
       <li class="nav-item">
@@ -47,6 +44,18 @@
 
  <% if user_signed_in? %>
        </li>   
+
+       <li class="nav-item">
+       <a class="nav-link" <%= link_to 'Favorites', favorite_path,  style:"color:#f9e8dc;   font-weight:bold"  %>  </a>
+ 
+       </li>
+ 
+       <li class="nav-item">
+       <a class="nav-link" <%= link_to 'New Pet', new_petprofile_path,  style:"color:#f9e8dc;   font-weight:bold"  %>  </a>
+ 
+       </li>
+
+
       <li class="nav-item">
       <a class="nav-link"  <%= link_to ' Hello ' +  current_user.name , edit_user_registration_path,  style:"color:#df7c7c;  font-weight:bold"  %>  </a>
       </li>

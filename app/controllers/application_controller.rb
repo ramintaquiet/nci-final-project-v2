@@ -12,4 +12,22 @@ class ApplicationController < ActionController::Base
     end
 
 
+
+
+    def favoritepet_text
+
+      return @favoritepet_exists ? "Remove from Favorites" : "Add to Favorites"
+      
+    end
+      
+      helper_method :favoritepet_text
+
+
+
+
+
+
+
+
+
 end
