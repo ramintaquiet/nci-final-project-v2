@@ -1,0 +1,60 @@
+
+
+
+
+
+    
+
+
+  
+<div class="separator">  
+
+<h1>Search  <img src="/other/logintr.png" width="85" height="75" alt="">  Results </h1>
+
+
+<br>
+
+
+
+
+<div class="container"> 
+        
+
+<% if @petprofiles.empty? %>
+ <h4 id="nores">  Sorry, no results found. Try again! </h4>
+ <p>
+ <p>
+<br>
+ <div class="searchbar2" >
+ <form class="form-inline my-2 my-lg-0" action="/search">
+ <input class="form-control ml-sm-2" name="q" town="q" type="search" placeholder="Search" aria-label="Search">
+ <button class="btn btn-outline-dark my-2 my-sm-0" type="submit">Search</button>
+ </form>
+ </div>
+
+<p>
+<% else %>
+
+  
+
+    <% @petprofiles.each do |petprofile| %>
+    
+      <%= link_to petprofile.image.attached? ? image_tag(petprofile.image, 
+        style:"width:320px; height:380px; border:4px solid #383d41; margin-top:8px " )
+       : image_tag("/defimage3.png",
+         style:"width:320px; height:380px; border:4px solid #383d41; margin-top:8px" ), petprofile %></td>
+ 
+    <% end %>
+
+    
+    <% end %>
+
+</div>
+
+
+ </div> 
+
+ <br>
+
+
+

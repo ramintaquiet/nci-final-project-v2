@@ -14,6 +14,16 @@ class PetprofilesController < ApplicationController
     @favoritepet_exists = Favoritepet.where(petprofile: @petprofile, user: current_user) == [] ? false : true
   end
 
+def search
+  
+  @petprofiles = Petprofile.where("name LIKE ?", "%" + params[:q] + "%" ) 
+
+  #key = "%#{search}%"
+
+#@petprofiles = Petprofile.where('name LIKE :search OR phone LIKE :search', search: key)
+
+end
+
   # GET /petprofiles/new
   def new
     @petprofile = Petprofile.new

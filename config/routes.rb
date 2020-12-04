@@ -7,6 +7,8 @@ Rails.application.routes.draw do
   devise_for :users
   root 'pages#home'
 
+
+  get 'search', to: "petprofiles#search"
   get '/home', to: 'pages#home'
   get '/about', to: 'pages#about'
   get '/info', to: 'pages#info'

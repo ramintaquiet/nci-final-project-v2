@@ -121,8 +121,10 @@ h4 {
           background-color: transparent !important;
       }
 
+
+
 .btn-link {
-          color: #50555b !important;
+          color: #383d41 !important;
       }
 
 .list-group {
@@ -150,25 +152,30 @@ h4 {
           font-weight: bold;
       }
 .owner {
-    border: 5px solid red;
+
     text-align: left;
     
 }
 
+.card-body {
+  text-align: justify;
+}
 
-[data-toggle="collapse"]:after {
-    display: inline-block;
-        display: inline-block;
-        font: normal normal normal 14px/1 FontAwesome;
-        font-size: inherit;
-        text-rendering: auto;
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
-      content: "\f054";
-      transform: rotate(90deg) ;
-      transition: all linear 0.25s;
-      float: right;
-      }   
-    [data-toggle="collapse"].collapsed:after {
-      transform: rotate(0deg) ;
-    }
+.searchbar {
+
+  
+  float: right;
+  padding-right: 7%;
+}
+
+.searchbar2 {
+
+ margin: auto;
+ display: flex;
+ justify-content: center;
+ 
+}
+
+#nores {
+  color: darkred;
+}
