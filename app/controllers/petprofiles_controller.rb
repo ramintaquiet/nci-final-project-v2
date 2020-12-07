@@ -16,11 +16,8 @@ class PetprofilesController < ApplicationController
 
 def search
   
-  @petprofiles = Petprofile.where("name LIKE ?", "%" + params[:q] + "%" ) 
-
-  #key = "%#{search}%"
-
-#@petprofiles = Petprofile.where('name LIKE :search OR phone LIKE :search', search: key)
+ 
+  @petprofiles = Petprofile.where("breed LIKE ?", "%" + params[:q] + "%" )
 
 end
 
