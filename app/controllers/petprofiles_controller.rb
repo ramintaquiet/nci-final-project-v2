@@ -15,11 +15,10 @@ class PetprofilesController < ApplicationController
   end
 
 def search
-  
- 
   @petprofiles = Petprofile.where("breed LIKE ?", "%" + params[:q] + "%" )
-
 end
+
+
 
   # GET /petprofiles/new
   def new
@@ -80,6 +79,8 @@ end
     def set_petprofile
       @petprofile = Petprofile.find(params[:id])
     end
+
+  
 
     # Only allow a list of trusted parameters through.
     def petprofile_params

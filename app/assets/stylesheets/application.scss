@@ -1,6 +1,8 @@
  @import "bootstrap";
 
-
+.navbar {
+  position: absolute !important;
+}
 .container1 {
    
     text-align: center;
@@ -14,6 +16,7 @@
     text-align: center;
     margin: auto;
 
+
     
 }
 
@@ -22,6 +25,7 @@
 .container2 {
  
   padding-top: 30px;
+ 
 
     
 }
@@ -36,6 +40,10 @@ float: right;
 }
 
 
+.navbar {
+  position: relative;
+}
+
 body {
    
     width: 100vw;
@@ -44,7 +52,7 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: 100% 100%;
-    position: relative;
+  
     
 
 }
@@ -81,15 +89,16 @@ h4 {
   
 
 .separator {
-        padding-top: 100px;
+        padding-top: 120px;
         padding-bottom: 60px;
+       
         
       }
     
-      
-.navbar {
-        position: fixed;      
+      .navbar {
+        position: absolute;
       }
+
     
 .btn-outline-danger {
           background-color: #DB6B6B !important;
@@ -178,4 +187,16 @@ h4 {
 
 #nores {
   color: darkred;
+}
+
+.btn-light {
+  background-color: #ba3b4a !important;
+  border-color: #ae5b66 !important;
+  color: antiquewhite !important;
+}
+
+.btn-light:hover {
+  background-color: #2f4f66  !important;
+  border-color:  #2f4f66  !important;
+
 }

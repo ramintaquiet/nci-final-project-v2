@@ -4,7 +4,7 @@
 <div class="container">
   <a class="navbar-brand" href="/home">
 
-  <img src="/other/logopinktr.png" width="90" height="80" alt="">
+  <img src="/other/logonew1tr.png" width="auto" height="80" alt="">
   </a>
 
 
@@ -19,61 +19,51 @@
 
 
       <li class="nav-item active">
-      <a class="nav-link" <%= link_to 'Tinder for Pets', home_path, style:"color:#f9e8dc; font-weight:bold" %>  </a>
+      <a class="nav-link" <%= link_to 'Home', home_path, style:"color:#466060; font-weight:bold" %>  </a>
       </li>
 
       <li class="nav-item">
-      <a class="nav-link" <%= link_to 'About', about_path,  style:"color:#f9e8dc;   font-weight:bold"  %>  </a>
+      <a class="nav-link" <%= link_to 'About', about_path,  style:"color:#466060;   font-weight:bold"  %>  </a>
       </li>
 
       <li class="nav-item">
-      <a class="nav-link" <%= link_to 'Info', info_path,  style:"color:#f9e8dc;   font-weight:bold"  %>  </a>
+      <a class="nav-link" <%= link_to 'Info', info_path,  style:"color:#466060;   font-weight:bold"  %>  </a>
       </li>
 
       <li class="nav-item">
-      <a class="nav-link" <%= link_to 'Pets Profiles', petprofiles_path,  style:"color:#f9e8dc;   font-weight:bold"  %>  </a>
+      <a class="nav-link" <%= link_to 'Pets Profiles', petprofiles_path,  style:"color:#466060;   font-weight:bold"  %>  </a>
 
       </li>
 
-
-  
-
-
-      <li class="nav-item">
-      <a class="nav-link" <%= link_to 'Pets', pets_path,  style:"color:#f9e8dc;   font-weight:bold"  %>  </a>
 
  <% if user_signed_in? %>
        </li>   
 
        <li class="nav-item">
-       <a class="nav-link" <%= link_to 'Favorites', favorite_path,  style:"color:#f9e8dc;   font-weight:bold"  %>  </a>
+       <a class="nav-link" <%= link_to 'Favorites', favorite_path,  style:"color:#466060;   font-weight:bold"  %>  </a>
  
        </li>
  
-       <li class="nav-item">
-       <a class="nav-link" <%= link_to 'New Pet', new_petprofile_path,  style:"color:#f9e8dc;   font-weight:bold"  %>  </a>
- 
-       </li>
 
 
       <li class="nav-item">
-      <a class="nav-link"  <%= link_to ' Hello ' +  current_user.name , edit_user_registration_path,  style:"color:#df7c7c;  font-weight:bold"  %>  </a>
+      <a class="nav-link"  <%= link_to ' Hello ' +  current_user.name , edit_user_registration_path,  style:"color:#466075;  font-weight:bold"  %>  </a>
       </li>
 
 
       <li class="nav-item">
-      <a class="nav-link" <%= link_to 'Sign out', destroy_user_session_path, :method => :delete,  style:"color:#f9e8dc;   font-weight:bold"  %>  </a>
+      <a class="nav-link" <%= link_to 'Sign out', destroy_user_session_path, :method => :delete,  style:"color:#466060;   font-weight:bold"  %>  </a>
     
        
  <% else %>
    </li>
 
    <li class="nav-item">
-   <a class="nav-link"  <%= link_to 'Register', new_user_registration_path, style:"color:#f9e8dc;  font-weight:bold"  %>  </a>
+   <a class="nav-link"  <%= link_to 'Register', new_user_registration_path, style:"color:#466060;  font-weight:bold"  %>  </a>
    </li> 
 
    <li class="nav-item">
-   <a class="nav-link"    <%= link_to 'Sign in', new_user_session_path, style:"color:#f9e8dc;  font-weight:bold"  %>  </a>
+   <a class="nav-link"    <%= link_to 'Sign in', new_user_session_path, style:"color:#466060;  font-weight:bold"  %>  </a>
 
         
  </li>
